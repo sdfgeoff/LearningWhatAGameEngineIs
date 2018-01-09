@@ -1,0 +1,5 @@
+*.blend[0-9]
+__pycache__
+*.blend
+.cachedir
+bin
