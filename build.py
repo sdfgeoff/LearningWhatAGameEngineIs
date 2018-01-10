@@ -30,7 +30,6 @@ def html():
 tb.depends_on(html, *[tb.File(f) for f in bd.list_folder('src/Html')])
 
 scripts = bd.ScriptPreprocessor(D+'src/Javascript/game.js', GAME+'game.js', D+'/src')
-print(scripts)
 
 
 def start_test_server():

@@ -66,7 +66,7 @@ class ScriptPreprocessor:
         while found is not None:
             filename = get_between(raw, '#include "', '"', include=False)
             new_text = open(os.path.join(self.base_path, filename)).read()
-            raw = shader_text.replace(found, new_text)
+            raw = raw.replace(found, new_text)
             found = get_between(raw, '#include "', '"', include=True)
             
         open(self.output_file, 'w').write(raw)
